@@ -39,6 +39,7 @@
     "clean": "rimraf lib tsconfig.tsbuildinfo",
     "build": "tsc",
     "lint": "eslint --ext .ts,.tsx ./src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix",
     "watch": "tsc -w"
   },
   "theiaExtensions": [
