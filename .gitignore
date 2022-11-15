@@ -1,0 +1,6 @@
+tsconfig.tsbuildinfo
+node_modules
+lib
+out
+tasklist-vscode/extension/pack
+bundle/

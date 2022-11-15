@@ -1,0 +1,16 @@
+{
+  "name": "hello-world-glsp",
+  "version": "0.0.0",
+  "description": "A small project in order to create an IDE with Eclipse GLSP + Theia",
+  "main": "index.js",
+  "repository": "git@github.com:TheShiuna/hello-world-glsp.git",
+  "author": "Florian OLIVARI <florian.olivari@gmail.com>",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "yarn build:server && yarn build:client",
+    "build:client": "yarn --cwd glsp-client install",
+    "build:server": "yarn --cwd glsp-server install"
+  }
+}
