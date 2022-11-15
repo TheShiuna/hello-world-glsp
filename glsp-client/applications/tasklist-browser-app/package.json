@@ -22,8 +22,8 @@
   "scripts": {
     "prepare": "yarn build",
     "build": "theia build --mode development",
-    "start": "theia start --TASKLIST_GLSP=5007 --root-dir=../workspace",
-    "start:external": "theia start --TASKLIST_GLSP=5007 --root-dir=../workspace --debug",
+    "start": "theia start --TASKLIST_GLSP=5007 --root-dir=../../workspace",
+    "start:external": "theia start --TASKLIST_GLSP=5007 --root-dir=../../workspace --debug",
     "watch": "theia build --watch --mode development"
   },
   "theia": {

@@ -21,7 +21,7 @@ import { TaskListLanguage } from '../common/tasklist-language';
 const DEFAULT_SERVER_PORT = '5007';
 
 export const LOG_DIR = path.join(__dirname, '..', '..', 'logs');
-const MODULE_PATH = path.join(__dirname, '..', '..', '..', '..', 'glsp-server', 'bundle', 'tasklist-glsp-server-packed.js');
+const MODULE_PATH = path.join(__dirname, '..', '..', '..', '..', '..', 'glsp-server', 'bundle', 'tasklist-glsp-server-packed.js');
 
 @injectable()
 export class TaskListServerContribution extends GLSPSocketServerContribution {

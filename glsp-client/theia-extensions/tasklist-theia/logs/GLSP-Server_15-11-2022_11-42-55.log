@@ -1,0 +1,9 @@
+11:42:55 info -  [SocketServerLauncher] The GLSP server is ready to accept new client requests on port: 5007 
+11:43:12 info -  [SocketServerLauncher] Starting GLSP server connection for client: '127.0.0.1' 
+11:43:14 info -  [DefaultGLSPServer] Initializing server with: applicationId: f09b1e0d-eec3-4e11-ad73-f7655be49238, protocolVersion: 0.9.0 
+11:43:14 info -  [DefaultGLSPServer] Initializing client session with: clientSessionId: 'tasklist-diagram:file:///home/folivari/Devs/hello-world-glsp/glsp-client/workspace/example.tasklist', diagramType: 'tasklist-diagram' 
+11:43:14 info -  [DefaultGLSPServer] process [action=requestModel, clientId=tasklist-diagram:file:///home/folivari/Devs/hello-world-glsp/glsp-client/workspace/example.tasklist] 
+11:43:14 info -  [DefaultGLSPServer] process [action=requestTypeHints, clientId=tasklist-diagram:file:///home/folivari/Devs/hello-world-glsp/glsp-client/workspace/example.tasklist] 
+11:43:14 info -  [DefaultGLSPServer] process [action=requestContextActions, clientId=tasklist-diagram:file:///home/folivari/Devs/hello-world-glsp/glsp-client/workspace/example.tasklist] 
+11:43:15 info -  [DefaultGLSPServer] process [action=computedBounds, clientId=tasklist-diagram:file:///home/folivari/Devs/hello-world-glsp/glsp-client/workspace/example.tasklist] 
+11:43:23 info -  [DefaultGLSPServer] Shutdown GLSP Server 
