@@ -62,6 +62,7 @@ module.exports = preloader.preload().then(() => {
     .then(function () { return import('sprotty-theia/lib/theia/diagram-module').then(load) })
     .then(function () { return import('@eclipse-glsp/theia-integration/lib/browser/theia-integration-frontend-module').then(load) })
     .then(function () { return import('@eclipse-glsp-examples/tasklist-theia/lib/browser/frontend-module').then(load) })
+    .then(function () { return import('example-widget/lib/browser/example-widget-frontend-module').then(load) })
         .then(start).catch(reason => {
             console.error('Failed to start the frontend application.');
             if (reason) {
