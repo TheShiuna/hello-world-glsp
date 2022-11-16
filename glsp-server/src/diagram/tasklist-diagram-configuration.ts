@@ -36,7 +36,20 @@ export class TaskListDiagramConfiguration implements DiagramConfiguration {
     }
 
     get edgeTypeHints(): EdgeTypeHint[] {
-        return [];
+        return [
+            {
+                elementTypeId: DefaultTypes.EDGE,
+                repositionable: true,
+                deletable: true,
+                routable: true,
+                sourceElementTypeIds: [
+                    DefaultTypes.NODE
+                ],
+                targetElementTypeIds: [
+                    DefaultTypes.NODE
+                ]
+            }
+        ];
     }
 
     layoutKind = ServerLayoutKind.MANUAL;
