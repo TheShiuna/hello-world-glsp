@@ -22,6 +22,8 @@ import {
     editLabelFeature,
     LogLevel,
     overrideViewerOptions,
+    PolylineEdgeViewWithGapsOnIntersections,
+    SEdge,
     SLabel,
     SLabelView,
     TYPES
@@ -36,6 +38,7 @@ const taskListDiagramModule = new ContainerModule((bind, unbind, isBound, rebind
     const context = { bind, unbind, isBound, rebind };
     configureDefaultModelElements(context);
     configureModelElement(context, DefaultTypes.LABEL, SLabel, SLabelView, { enable: [editLabelFeature] });
+    configureModelElement(context, DefaultTypes.EDGE, SEdge, PolylineEdgeViewWithGapsOnIntersections);
 });
 
 export default function createContainer(widgetId: string): Container {

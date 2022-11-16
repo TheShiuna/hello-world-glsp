@@ -28,6 +28,7 @@ import {
 } from '@eclipse-glsp/server-node';
 import { BindingTarget } from '@eclipse-glsp/server-node/lib/di/binding-target';
 import { injectable } from 'inversify';
+import { CreateEdgeHandler } from '../handler/create-edge-handler';
 import { CreateTaskHandler } from '../handler/create-task-node-handler';
 import { DeleteTaskNodeHandler } from '../handler/delete-task-node-handler';
 import { TaskListApplyLabelEditHandler } from '../handler/tasklist-apply-label-edit-handler';
@@ -67,6 +68,7 @@ export class TaskListDiagramModule extends DiagramModule {
     protected override configureOperationHandlers(binding: InstanceMultiBinding<OperationHandlerConstructor>): void {
         super.configureOperationHandlers(binding);
         binding.add(CreateTaskHandler);
+        binding.add(CreateEdgeHandler);
         binding.add(TaskListChangeBoundsHandler);
         binding.add(TaskListApplyLabelEditHandler);
         binding.add(DeleteTaskNodeHandler);

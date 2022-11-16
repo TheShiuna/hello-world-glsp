@@ -23,11 +23,12 @@ import { AnyObject, hasArrayProp, hasObjectProp, hasStringProp } from '@eclipse-
 export interface TaskList {
     id: string;
     tasks: Task[];
+    edges: Edge[];
 }
 
 export namespace TaskList {
     export function is(object: any): object is TaskList {
-        return AnyObject.is(object) && hasStringProp(object, 'id') && hasArrayProp(object, 'tasks');
+        return AnyObject.is(object) && hasStringProp(object, 'id') && hasArrayProp(object, 'tasks') && hasArrayProp(object, 'edges');
     }
 }
 
@@ -41,5 +42,17 @@ export interface Task {
 export namespace Task {
     export function is(object: any): object is Task {
         return AnyObject.is(object) && hasStringProp(object, 'id') && hasStringProp(object, 'name') && hasObjectProp(object, 'position');
+    }
+}
+
+export interface Edge {
+    id: string;
+    source: string;
+    target: string;
+}
+
+export namespace Edge {
+    export function is(object: any): object is Edge {
+        return AnyObject.is(object) && hasStringProp(object, 'id') && hasStringProp(object, 'source') && hasObjectProp(object, 'target');
     }
 }

@@ -13,9 +13,9 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { GGraph, GLabel, GModelFactory, GNode } from '@eclipse-glsp/server-node';
+import { GEdge, GGraph, GLabel, GModelFactory, GNode } from '@eclipse-glsp/server-node';
 import { inject, injectable } from 'inversify';
-import { Task } from './tasklist-model';
+import { Edge, Task } from './tasklist-model';
 import { TaskListModelState } from './tasklist-model-state';
 
 @injectable()
@@ -27,7 +27,8 @@ export class TaskListGModelFactory implements GModelFactory {
         const taskList = this.modelState.taskList;
         this.modelState.index.indexTaskList(taskList);
         const childNodes = taskList.tasks.map(task => this.createTaskNode(task));
-        const newRoot = GGraph.builder().id(taskList.id).addChildren(childNodes).build();
+        const childEdges = taskList.edges.map(edge => this.createEdge(edge));
+        const newRoot = GGraph.builder().id(taskList.id).addChildren(childNodes).addChildren(childEdges).build();
         this.modelState.updateRoot(newRoot);
     }
 
@@ -43,6 +44,16 @@ export class TaskListGModelFactory implements GModelFactory {
         if (task.size) {
             builder.addLayoutOptions({ prefWidth: task.size.width, prefHeight: task.size.height });
         }
+
+        return builder.build();
+    }
+
+    protected createEdge(edge: Edge): GEdge {
+        const builder = GEdge.builder()
+            .id(edge.id)
+            .addCssClass('tasklist-edge')
+            .sourceId(edge.source)
+            .targetId(edge.target);
 
         return builder.build();
     }
