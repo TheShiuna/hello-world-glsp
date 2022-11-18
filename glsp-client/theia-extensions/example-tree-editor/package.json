@@ -1,0 +1,35 @@
+{
+  "name": "example-tree-editor",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/editor": "latest",
+    "@theia/filesystem": "latest",
+    "@theia/workspace": "latest",
+    "@eclipse-emfcloud/theia-tree-editor": "^0.7.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "build": "tsc -b && yarn run lint",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/example-tree-editor-frontend-module"
+    }
+  ]
+}
