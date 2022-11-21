@@ -47,6 +47,17 @@
     "**/@theia/editor": "1.27.0",
     "**/@theia/filesystem": "1.27.0",
     "**/@theia/messages": "1.27.0",
-    "**/@theia/monaco": "1.27.0"
+    "**/@theia/monaco": "1.27.0",
+    "**/@theia/workspace": "1.27.0",
+    "**/@theia/markers": "1.27.0",
+    "**/@theia/terminal": "1.27.0",
+    "**/@theia/process": "1.27.0",
+    "**/@theia/cli": "1.27.0",
+    "**/@theia/navigator": "1.27.0",
+    "**/@theia/preferences": "1.27.0",
+    "**/@eclipse-glsp/client": "1.1.0-next.7ff1b00.184",
+    "**/@eclipse-glsp/protocol": "1.1.0-next.7ff1b00.184",
+    "**/@eclipse-glsp/theia-integration": "1.1.0-next.7f1c788.133",
+    "**/@eclipse-emfcloud/theia-tree-editor": "0.7.0-next.4b9e870"
   }
 }
