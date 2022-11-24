@@ -1,0 +1,40 @@
+{
+    "name": "example-jsonforms-editor",
+    "keywords": [
+      "theia-extension"
+    ],
+    "version": "0.0.0",
+    "files": [
+      "lib",
+      "src"
+    ],
+    "dependencies": {
+      "@theia/core": "^1.0.0",
+      "@theia/editor": "^1.0.0",
+      "@theia/filesystem": "^1.0.0",
+      "@jsonforms/core": "^3.0.0",
+      "@jsonforms/react": "^3.0.0",
+      "@jsonforms/vanilla-renderers": "^3.0.0"
+    },
+    "peerDependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "rimraf": "latest",
+      "typescript": "latest"
+    },
+    "scripts": {
+      "prepare": "yarn run clean && yarn run build",
+      "lint": "eslint --ext js,jsx,ts,tsx src",
+      "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix",
+      "clean": "rimraf lib *.tsbuildinfo",
+      "build": "tsc -b",
+      "watch": "tsc -w"
+    },
+    "theiaExtensions": [
+      {
+        "frontend": "lib/browser/example-jsonforms-editor-frontend-module"
+      }
+    ]
+  }
