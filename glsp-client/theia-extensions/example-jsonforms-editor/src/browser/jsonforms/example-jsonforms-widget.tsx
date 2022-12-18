@@ -147,6 +147,7 @@ export class ExampleJsonFormsWidget extends BaseWidget implements NavigatableWid
         this.provider.get(this.uri).then(
             resource => {
                 this.resource = resource;
+                this.toDispose.push(this.resource);
                 this.load();
             },
             _ => console.error(`Could not create ressource for uri ${this.uri}`)

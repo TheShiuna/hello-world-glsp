@@ -1,0 +1,34 @@
+{
+  "name": "pokemon-api-editor",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "^1.0.0",
+    "@theia/filesystem": "^1.0.0",
+    "@theia/editor": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "build": "tsc -b && yarn run lint",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/pokemon-api-editor-frontend-module",
+      "backend": "lib/node/pokemon-api-editor-backend-module"
+    }
+  ]
+}

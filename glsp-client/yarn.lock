@@ -2363,6 +2363,18 @@
     "@electron/get" "^1.12.4"
     unzipper "^0.9.11"
 
+"@theia/file-search@1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@theia/file-search/-/file-search-1.27.0.tgz#d1c0f484146c4ead2180761d8ab44174572c7bde"
+  integrity sha512-GJra+1/URHa9kg0Zc8ev1no0KRGUQ+dmpT0ynVfvZZUpz5u1U13wKbaB2tVOmlQ/bmetpB1JALB/IIAGqVKf6A==
+  dependencies:
+    "@theia/core" "1.27.0"
+    "@theia/editor" "1.27.0"
+    "@theia/filesystem" "1.27.0"
+    "@theia/process" "1.27.0"
+    "@theia/workspace" "1.27.0"
+    vscode-ripgrep "^1.2.4"
+
 "@theia/filesystem@1.27.0", "@theia/filesystem@^1.0.0", "@theia/filesystem@^1.18.0":
   version "1.27.0"
   resolved "https://registry.yarnpkg.com/@theia/filesystem/-/filesystem-1.27.0.tgz#126a77c749097a5c81d31880e8466d096e51e041"
@@ -2496,6 +2508,20 @@
   dependencies:
     http-proxy-agent "^5.0.0"
     https-proxy-agent "^5.0.0"
+
+"@theia/search-in-workspace@1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@theia/search-in-workspace/-/search-in-workspace-1.27.0.tgz#75410acfb6f6b5396c9cbbb561ac7b57f6bbb9c1"
+  integrity sha512-bMWbsR8sYH3+W3DCDGFv12sy3BFCUnsPigZrAsYRcIynfLUg+MhZiBpikQCiDhCqry1sobFEOjO1tzuY5BdLcg==
+  dependencies:
+    "@theia/core" "1.27.0"
+    "@theia/editor" "1.27.0"
+    "@theia/filesystem" "1.27.0"
+    "@theia/navigator" "1.27.0"
+    "@theia/process" "1.27.0"
+    "@theia/workspace" "1.27.0"
+    minimatch "^3.0.4"
+    vscode-ripgrep "^1.2.4"
 
 "@theia/terminal@1.27.0":
   version "1.27.0"
@@ -5580,6 +5606,11 @@ filename-reserved-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/filename-reserved-regex/-/filename-reserved-regex-2.0.0.tgz#abf73dfab735d045440abfea2d91f389ebbfa229"
   integrity sha1-q/c9+rc10EVECr/qLZHzieu/oik=
+
+filename-reserved-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/filename-reserved-regex/-/filename-reserved-regex-3.0.0.tgz#3d5dd6d4e2d73a3fed2ebc4cd0b3448869a081f7"
+  integrity sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -8716,7 +8747,7 @@ proxy-addr@~2.0.7:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
 
-proxy-from-env@^1.0.0:
+proxy-from-env@^1.0.0, proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
@@ -10587,6 +10618,13 @@ valid-filename@^2.0.1:
   dependencies:
     filename-reserved-regex "^2.0.0"
 
+valid-filename@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/valid-filename/-/valid-filename-4.0.0.tgz#64f1528cffa0725491de84bf1a65733c6125ab06"
+  integrity sha512-VEYTpTVPMgO799f2wI7zWf0x2C54bPX6NAfbZ2Z8kZn76p+3rEYCTYVYzMUcVSMvakxMQTriBf24s3+WeXJtEg==
+  dependencies:
+    filename-reserved-regex "^3.0.0"
+
 validate-npm-package-license@^3.0.1, validate-npm-package-license@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -10638,6 +10676,14 @@ vscode-languageserver-types@3.15.1:
   version "3.15.1"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.15.1.tgz#17be71d78d2f6236d414f0001ce1ef4d23e6b6de"
   integrity sha512-+a9MPUQrNGRrGU630OGbYVQ+11iOIovjCkqxajPa9w57Sd5ruK8WQNsslzpa0x/QJqC8kRc2DUxWjIFwoNm4ZQ==
+
+vscode-ripgrep@^1.2.4:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/vscode-ripgrep/-/vscode-ripgrep-1.13.2.tgz#8ccebc33f14d54442c4b11962aead163c55b506e"
+  integrity sha512-RlK9U87EokgHfiOjDQ38ipQQX936gWOcWPQaJpYf+kAkz1PQ1pK2n7nhiscdOmLu6XGjTs7pWFJ/ckonpN7twQ==
+  dependencies:
+    https-proxy-agent "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 vscode-textmate@^4.4.0:
   version "4.4.0"
